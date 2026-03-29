@@ -1,0 +1,16 @@
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    plugins.withType(JavaPlugin).tap {
+        configureEach {
+            dependencies {
+                compileOnly 'org.projectlombok:lombok:1.18.44'
+                annotationProcessor 'org.projectlombok:lombok:1.18.44'
+            }
+        }
+    }
+}

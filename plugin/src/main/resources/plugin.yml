@@ -1,0 +1,6 @@
+name: NetworkLib
+version: '1.0.0'
+main: com.hyperdondon.networklib.NetworkLib
+api-version: '1.21'
+load: STARTUP
+website: https://sentrystudios.org
