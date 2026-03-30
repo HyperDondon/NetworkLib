@@ -1,6 +1,5 @@
 package com.hyperdondon.networklib.api;
 
-import com.hyperdondon.networklib.platform.Platform;
 import com.hyperdondon.networklib.platform.PlatformHandler;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;

@@ -1,6 +1,5 @@
-package com.hyperdondon.networklib.payload;
+package com.hyperdondon.networklib.api.payload;
 
-import com.hyperdondon.networklib.listener.NetworkLibListener;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.Plugin;

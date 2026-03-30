@@ -1,15 +1,15 @@
-package com.hyperdondon.networklib.types;
+package com.hyperdondon.networklib.api.types;
 
-public class VarInt extends Number {
-    private final int value;
+public class VarLong extends Number {
+    private final long value;
 
-    public VarInt(int value) {
+    public VarLong(long value) {
         this.value = value;
     }
 
     @Override
     public int intValue() {
-        return value;
+        return (int) value;
     }
 
     @Override

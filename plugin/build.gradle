@@ -1,7 +1,8 @@
 plugins {
     id("xyz.jpenilla.run-paper") version "2.3.1"
-    id 'multiloader-common'
+    id 'java-library'
     id 'maven-publish'
+    id 'com.gradleup.shadow' version '8.3.0'
 }
 
 repositories {
@@ -19,7 +20,6 @@ java {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
     compileOnly("io.netty:netty-all:4.2.10.Final")
-    api project(':common')
 }
 
 tasks {
@@ -47,9 +47,9 @@ tasks.processResources {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = "com.hyperdondon"
-            artifactId = "networklib"
-            version = '1.0'
+            groupId = "com.hyperdondon.networklib"
+            artifactId = "networklib-plugin"
+            version = version
 
             from components.java
         }

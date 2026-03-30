@@ -1,4 +1,4 @@
-package com.hyperdondon.networklib.encoding;
+package com.hyperdondon.networklib.api.encoding;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufUtil;

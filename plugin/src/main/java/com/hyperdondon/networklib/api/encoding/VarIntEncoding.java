@@ -1,6 +1,6 @@
-package com.hyperdondon.networklib.encoding;
+package com.hyperdondon.networklib.api.encoding;
 
-import com.hyperdondon.networklib.types.VarInt;
+import com.hyperdondon.networklib.api.types.VarInt;
 import io.netty.buffer.ByteBuf;
 
 /**

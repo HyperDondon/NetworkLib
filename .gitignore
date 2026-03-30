@@ -23,8 +23,3 @@ eclipse
 run
 runs
 .vscode
-
-# test packages
-**/test/
-**/tests/
-src/test/

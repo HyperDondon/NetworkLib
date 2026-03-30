@@ -1,7 +1,7 @@
 package com.hyperdondon.networklib.listener;
 
-import com.hyperdondon.networklib.payload.ServerboundPayload;
-import com.hyperdondon.networklib.payload.ServerboundPayloadRegistry;
+import com.hyperdondon.networklib.api.payload.ServerboundPayload;
+import com.hyperdondon.networklib.api.payload.ServerboundPayloadRegistry;
 import io.netty.buffer.Unpooled;
 import lombok.Getter;
 

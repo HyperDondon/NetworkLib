@@ -1,4 +1,4 @@
-package com.hyperdondon.networklib.types;
+package com.hyperdondon.networklib.api.types;
 
 import org.joml.Vector3i;
 

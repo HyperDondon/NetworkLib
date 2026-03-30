@@ -1,4 +1,4 @@
-package com.hyperdondon.networklib.types;
+package com.hyperdondon.networklib.api.types;
 
 public class UnsignedShort extends Number {
     private final int value;
