@@ -57,7 +57,7 @@ publishing {
     }
     publications {
         maven(MavenPublication) {
-            groupId = "com.hyperdondon.networklib"
+            groupId = "com.hyperdondon"
             artifactId = "networklib-plugin"
             version = version
 

@@ -38,10 +38,6 @@ repositories {
         )
         filter { includeGroup('org.parchmentmc.data') }
     }
-    maven {
-        name = 'BlameJared'
-        url = 'https://maven.blamejared.com'
-    }
 }
 
 // Declare capabilities on the outgoing configurations.
@@ -120,7 +116,7 @@ processResources {
 
 publishing {
     publications {
-        register('mavenJava', MavenPublication) {
+        maven(MavenPublication) {
             artifactId base.archivesName.get()
             from components.java
         }
