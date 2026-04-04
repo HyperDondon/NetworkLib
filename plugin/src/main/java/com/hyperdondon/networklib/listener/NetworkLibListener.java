@@ -4,7 +4,6 @@ import com.hyperdondon.networklib.api.payload.ServerboundPayload;
 import com.hyperdondon.networklib.api.payload.ServerboundPayloadRegistry;
 import io.netty.buffer.Unpooled;
 import lombok.Getter;
-
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.messaging.PluginMessageListener;
@@ -19,6 +18,7 @@ public class NetworkLibListener implements PluginMessageListener {
     public void onPluginMessageReceived(@NotNull String channel, @NotNull Player player, byte @NotNull [] message) {
         NamespacedKey key;
         try {
+            //Assume channel is a valid identifier, since (I think) the Bukkit API
             key = NamespacedKey.fromString(channel);
         } catch (Exception e) {
             //throw new RuntimeException("Unable to parse packet id. Invalid request.", e);
@@ -29,7 +29,7 @@ public class NetworkLibListener implements PluginMessageListener {
 
         ServerboundPayload payload;
         try {
-            payload = ServerboundPayloadRegistry.getPayload(key).getConstructor().newInstance();
+            payload = ServerboundPayloadRegistry.getPayload(key).get();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
