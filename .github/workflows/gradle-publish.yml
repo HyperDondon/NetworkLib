@@ -30,7 +30,10 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+      uses: gradle/actions/setup-gradle@017a9effdb900e5b5b2fddfb590a105619dca3c3 # v4.4.2
+
+    - name: Make gradlew executable # Copilot gave me this 💀
+      run: chmod +x gradlew
 
     - name: Build with Gradle
       run: ./gradlew :mod:fabric:build :mod:neoforge:build :plugin:build
@@ -38,7 +41,7 @@ jobs:
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
-      run: ./gradlew publish
+      run: ./gradlew :mod:fabric:publishMavenPublicationToGitHubPackagesRepository :mod:neoforge:publishMavenPublicationToGitHubPackagesRepository :plugin:publishMavenPublicationToGitHubPackagesRepository
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
