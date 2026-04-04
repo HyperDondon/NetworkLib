@@ -35,13 +35,10 @@ jobs:
     - name: Make gradlew executable # Copilot gave me this 💀
       run: chmod +x gradlew
 
-    - name: Build with Gradle
-      run: ./gradlew :mod:fabric:build :mod:neoforge:build :plugin:build
-
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
-      run: ./gradlew :mod:fabric:publishMavenPublicationToGitHubPackagesRepository :mod:neoforge:publishMavenPublicationToGitHubPackagesRepository :plugin:publishMavenPublicationToGitHubPackagesRepository
+      run: ./gradlew publishMavenPublicationToGitHubPackagesRepository
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
