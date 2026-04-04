@@ -129,5 +129,13 @@ publishing {
         maven {
             url System.getenv('local_maven_url')
         }
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/HyperDondon/NetworkLib"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
 }
