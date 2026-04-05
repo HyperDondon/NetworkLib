@@ -113,25 +113,3 @@ processResources {
 
     inputs.properties(expandProps)
 }
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            artifactId base.archivesName.get()
-            from components.java
-        }
-    }
-    repositories {
-        maven {
-            url System.getenv('local_maven_url')
-        }
-        maven {
-            name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/HyperDondon/NetworkLib"
-            credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
-            }
-        }
-    }
-}
